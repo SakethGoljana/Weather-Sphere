@@ -1,38 +1,98 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(5px) brightness(30%);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  padding-top: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-section {
+  margin-top: 20px;
+}
+
+.search-bar {
+  position: relative;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #555;
+  font-size: 18px;
+}
+
+.city-search {
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s ease;
+}
+
+.city-search:focus {
+  background: white;
+}
+
+.weather-card {
+  background: rgba(99, 97, 97, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.weather-card img {
+  width: 80px;
+}
+
+.cities-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-message {
+  font-size: 20px;
+  color: red;
+  margin-top: 20px;
 }
